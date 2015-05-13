@@ -119,7 +119,7 @@
 - (void)shutdownOpenGL;
 
 
-- (void)update;
+- (BOOL)update;
 - (void)redraw;
 
 @end
@@ -629,8 +629,9 @@ static const GLfloat _kISSequenceViewUVs[] =
     }
 }
 
-- (void)update
+- (BOOL)update
 {
+    return YES;
 }
 
 - (void)redraw
@@ -763,11 +764,11 @@ static const GLfloat _kISSequenceViewUVs[] =
     return self;
 }
 
-- (void)update
+- (BOOL)update
 {
     if (_paused)
     {
-        return;
+        return NO;
     }
     
     if (_animationInterval != 0)
@@ -775,7 +776,7 @@ static const GLfloat _kISSequenceViewUVs[] =
         if (_animationTimer < _animationInterval)
         {
             _animationTimer ++;
-            return;
+            return YES;
         }
         else
         {
@@ -821,6 +822,7 @@ static const GLfloat _kISSequenceViewUVs[] =
     {
         [self jumpToFrame:newFrame];
     }
+    return YES;
 }
 
 - (void)setRange:(NSRange)range
