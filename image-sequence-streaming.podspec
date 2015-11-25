@@ -74,7 +74,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/aceontech/image-sequence-streaming.git", :tag => "v0.4.0" }
+  s.source       = { :git => "https://github.com/aceontech/image-sequence-streaming.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
