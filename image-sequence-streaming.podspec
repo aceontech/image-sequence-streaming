@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "image-sequence-streaming"
-  s.version      = "0.4.0"
+  s.version      = "0.4.1"
   s.summary      = "Interactive image sequences with small memory footprint, nearly unlimited length, and lighting fast playback."
 
   s.description  = <<-DESC
