@@ -24,7 +24,7 @@
 
 + (ISSequence*)sequenceFromFilepath:(NSString*)filepath
 {
-    return [[[self alloc] initWithFileAtPath:filepath] autorelease];
+    return [[[self alloc] initWithFilepath:filepath] autorelease];
 }
 
 - (id)initWithFilepath:(NSString*)filepath
